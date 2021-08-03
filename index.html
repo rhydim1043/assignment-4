@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    
+        
+    <ul id="menu">
+        
+        <li><a id="nav-items" href="#about">About</a></li>
+        <li><a id="nav-items" href="#contact">Contact</a></li>
+        <li><a id="nav-items" href="#news">News</a></li>
+        <li><a id="nav-items" href="#home">Home</a></li>
+        <li><a class="active" href="#home" id="brand-logo"><img id="logo" src="logo.jpg"> </a></li>
+      </ul>
+      <br>
+      <div class="slideshow-container">
+
+        <div class="mySlides fade">
+           <img src="img_nature_wide.jpg" style="width:100%">          
+        </div>
+        
+        <div class="mySlides fade">
+          
+          <img src="img_snow_wide.jpg" style="width:100%">
+          
+        </div>
+        
+        <div class="mySlides fade">
+          
+          <img src="img_mountains_wide.jpg" style="width:100%">
+          
+        </div>
+        
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        
+        </div>
+        <br>
+        
+        <div style="text-align:center">
+          <span class="dot" onclick="currentSlide(1)"></span> 
+          <span class="dot" onclick="currentSlide(2)"></span> 
+          <span class="dot" onclick="currentSlide(3)"></span> 
+        </div>
+        <br><br>
+        <h1>Our Best Products</h1><br>
+        <div class="products">
+        <div class="card">
+            <img src="tv.png" style="width:100%">
+            <h1>Phoenix TV</h1>
+            <p class="price">Rs.40000</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio quae labore vitae eos laboriosam nemo rem sunt, quo suscipit, similique iste corporis facilis laudantium ab inventore illo deleniti quam soluta.</p>
+            <p><button>Add to Cart</button></p>
+          </div>
+        <div class="card">
+            <img src="tv.png" style="width:100%">
+            <h1>Phoenix TV</h1>
+            <p class="price">Rs.40000</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio quae labore vitae eos laboriosam nemo rem sunt, quo suscipit, similique iste corporis facilis laudantium ab inventore illo deleniti quam soluta.</p>
+            <p><button>Add to Cart</button></p>
+          </div>
+        <div class="card">
+            <img src="tv.png" style="width:100%">
+            <h1>Phoenix TV</h1>
+            <p class="price">Rs.40000</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio quae labore vitae eos laboriosam nemo rem sunt, quo suscipit, similique iste corporis facilis laudantium ab inventore illo deleniti quam soluta.</p>
+            <p><button>Add to Cart</button></p>
+          </div>
+         </div>
+       <br><br><h1>Contact Us</h1>
+       <div class="container">
+        <form>
+          <label for="fname">First Name</label>
+          <input type="text" id="fname" name="firstname" placeholder="Your name..">
+      
+          <label for="lname">Last Name</label>
+          <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+      
+          <label for="subject">Subject</label>
+          <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+      
+          <input type="submit" value="Submit">
+        </form>
+      </div>
+      <div class="footer">
+        <p><h1>Made with <span>❤</span> by Arsh</h1></p>
+      </div>
+        
+        <script>
+            var slideIndex = 0;
+            showSlides();
+            
+            function showSlides() {
+              var i;
+              var slides = document.getElementsByClassName("mySlides");
+              var dots = document.getElementsByClassName("dot");
+              for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+              }
+              slideIndex++;
+              if (slideIndex > slides.length) {slideIndex = 1}    
+              for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+              }
+              slides[slideIndex-1].style.display = "block";
+              dots[slideIndex-1].className += " active";
+              setTimeout(showSlides, 2000); // Change image every 2 seconds
+            }
+            </script>
+            
+</body>
+</html>
